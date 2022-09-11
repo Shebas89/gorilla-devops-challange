@@ -7,7 +7,7 @@ terraform {
 }
 
 inputs = {
-  alias = "alias/gl-dev-kms-key"
+  alias       = "alias/gl-dev-kms-key"
   description = "GL Dev KMS Key"
 
   tags = {
