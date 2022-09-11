@@ -1,8 +1,3 @@
-provider "aws" {
-  profile = "default"
-  region  = "us-east-1"
-}
-
 module "gl_ecr" {
   source = "./../../modules/ecr/"
 

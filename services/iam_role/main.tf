@@ -1,7 +1,3 @@
-provider "aws" {
-  profile = "default"
-  region  = "us-east-1"
-}
 module "role" {
   source = "../../modules/iam_role/"
   for_each = {

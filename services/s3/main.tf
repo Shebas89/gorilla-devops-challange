@@ -1,8 +1,3 @@
-provider "aws" {
-  profile = "default"
-  region  = "us-east-1"
-}
-
 module "s3_gl" {
   source = "./../../modules/s3/"
   for_each = {
