@@ -7,9 +7,9 @@ output "arn" {
 }
 
 output "public_subnets" {
-  value       = module.aws_vpc.public_subnets
+  value = module.aws_vpc.public_subnets
 }
 
 output "private_subnets" {
-  value       = module.aws_vpc.private_subnets
+  value = module.aws_vpc.private_subnets
 }

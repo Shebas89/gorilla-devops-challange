@@ -1,3 +1,3 @@
 output "roles" {
-  value       = module.role
+  value = module.role
 }
