@@ -10,7 +10,7 @@ inputs = {
   ecr_repositories = [
     {
       ecr_name             = "gorilla-logic-images"
-      image_tag_mutability = false
+      image_tag_mutability = "MUTABLE"
       policy               = file("${get_parent_terragrunt_dir()}/../policies/ecr_repository_policy.json")
       scan_on_push         = true
     }
