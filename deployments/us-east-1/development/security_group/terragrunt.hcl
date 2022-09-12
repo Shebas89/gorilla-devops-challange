@@ -18,7 +18,7 @@ inputs = {
       ingress = [
         { description = "TLS from VPC on 80 port", port = 80, cidr = ["0.0.0.0/0"] },
         { description = "TLS from VPC on 443 port", port = 443, cidr = ["0.0.0.0/0"] },
-        { description = "TLS from VPC on 8080 port", port = 8080, cidr = ["0.0.0.0/0"] }
+        { description = "TLS from VPC on 3000 port", port = 3000, cidr = ["10.0.0.0/20"] }
       ]
     }
   ]
