@@ -3,7 +3,7 @@ variable "load_balancer_arn" {
 }
 
 variable "port" {
-  default = "8080"
+  default = "80"
   type    = string
 }
 
