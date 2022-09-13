@@ -16,9 +16,9 @@ inputs = {
       name   = "gl-load-balancer"
       vpc_id = dependency.vpc.outputs.vpc.id
       ingress = [
-        { description = "TLS from VPC on 80 port", port = 80, cidr = ["0.0.0.0/0"] },
-        { description = "TLS from VPC on 443 port", port = 443, cidr = ["0.0.0.0/0"] },
-        { description = "TLS from VPC on 3000 port", port = 3000, cidr = ["10.0.0.0/20"] }
+        { description = "TLS from VPC on 80 port", port = 80, protocol = "tcp", cidr = ["0.0.0.0/0"] },
+        { description = "TLS from VPC on 443 port", port = 443, protocol = "tcp", cidr = ["0.0.0.0/0"] },
+        { description = "TLS from VPC on 3000 port", port = 0, protocol = "all", cidr = ["10.0.0.0/20"] }
       ]
     }
   ]

@@ -9,7 +9,7 @@ resource "aws_security_group" "sg" {
     content {
       cidr_blocks = ingress.value.cidr
       from_port   = ingress.value.port
-      protocol    = "tcp"
+      protocol    = ingress.value.protocol
       to_port     = ingress.value.port
     }
   }
