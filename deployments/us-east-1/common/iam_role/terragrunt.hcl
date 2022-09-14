@@ -19,6 +19,10 @@ inputs = {
     {
       role_name          = "codepipelineGlRole"
       assume_role_policy = file("${get_parent_terragrunt_dir()}/../policies/codepipeline_assume_role_policy.json")
+    },
+    {
+      role_name          = "ecsScaleApp"
+      assume_role_policy = file("${get_parent_terragrunt_dir()}/../policies/asg_assume_role_policy.json")
     }
   ]
 }
