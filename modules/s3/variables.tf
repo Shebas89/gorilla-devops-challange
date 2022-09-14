@@ -15,7 +15,7 @@ variable "versioning" {
 }
 
 variable "encryption" {
-  default = true
+  default = false
   type    = bool
 }
 

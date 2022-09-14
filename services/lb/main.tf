@@ -7,8 +7,8 @@ module "lb" {
 }
 
 module "lb_listener" {
-  depends_on = [ module.lb, module.lb_tg ]
-  source = "../../modules/lb_listener"
+  depends_on = [module.lb, module.lb_tg]
+  source     = "../../modules/lb_listener"
 
   load_balancer_arn = module.lb.arn
   target_group_arn  = module.lb_tg.arn

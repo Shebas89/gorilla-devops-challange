@@ -1,3 +1,3 @@
 variable "aws_service_name" {
-  type        = string
+  type = string
 }

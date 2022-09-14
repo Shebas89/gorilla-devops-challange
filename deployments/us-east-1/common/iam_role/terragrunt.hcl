@@ -11,6 +11,14 @@ inputs = {
     {
       role_name          = "ecsTaskExecutionRole"
       assume_role_policy = file("${get_parent_terragrunt_dir()}/../policies/ecs_tasks_trust_policy.json")
+    },
+    {
+      role_name          = "codeBuildGlRole"
+      assume_role_policy = file("${get_parent_terragrunt_dir()}/../policies/codebuild_assume_role_policy.json")
+    },
+    {
+      role_name          = "codepipelineGlRole"
+      assume_role_policy = file("${get_parent_terragrunt_dir()}/../policies/codepipeline_assume_role_policy.json")
     }
   ]
 }

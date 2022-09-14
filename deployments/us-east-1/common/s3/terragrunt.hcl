@@ -12,7 +12,7 @@ inputs = {
       acl                  = "private"
       bucket_name          = "gl-dev-artifact-logs"
       bucket_sse_algorithm = "aws:kms"
-      public               = false
+      public               = true
     }
   ]
 }
