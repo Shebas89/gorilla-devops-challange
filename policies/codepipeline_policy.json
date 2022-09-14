@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "codePipelinePolicy1",
+      "Effect": "Allow",
+      "Action": [
+        "codestar-connections:*",
+        "cloudwatch:*",
+        "codebuild:*",
+        "logs:*",
+        "s3:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
