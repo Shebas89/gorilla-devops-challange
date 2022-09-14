@@ -3,7 +3,7 @@ include "root" {
 }
 
 terraform {
-  source = "${get_parent_terragrunt_dir()}/..//modules/codestartconnections/"
+  source = "${get_parent_terragrunt_dir()}/..//modules/codestar_connection/"
 }
 
 inputs = {
