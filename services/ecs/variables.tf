@@ -81,3 +81,37 @@ variable "container_name" {
 variable "security_groups" {
   type = list(any)
 }
+
+variable "max_capacity" {
+  default = 2
+  type = number
+}
+
+variable "min_capacity" {
+  default = 1
+  type = number
+}
+
+variable "scalable_dimension" {
+  default = "ecs:service:DesiredCount"
+  type = string
+}
+
+variable "role_arn_asg" {
+  type = string
+}
+
+variable "appas_policy_name_cpu" {
+  default = "application-scaling-policy-cpu"
+  type    = string
+}
+
+variable "appas_policy_name_mem" {
+  default = "application-scaling-policy-memory"
+  type    = string
+}
+
+variable "policy_type" {
+  default = "TargetTrackingScaling"
+  type    = string
+}

@@ -58,4 +58,9 @@ inputs = {
 
   role_id = dependency.ecs_role.outputs.roles.ecsTaskExecutionRole.id
   policy  = file("${get_parent_terragrunt_dir()}/../policies/ecs_policy.json")
+
+  max_capacity       = 2
+  min_capacity       = 1
+  scalable_dimension = "ecs:service:DesiredCount"
+  role_arn_asg       = dependency.ecs_role.outputs.roles.ecsScaleApp.arn
 }

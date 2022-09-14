@@ -30,3 +30,13 @@ module "iam_policy" {
   role_id     = var.role_id
   policy      = var.policy
 }
+
+module "asg" {
+  source = "../../modules/asg"
+
+  max_capacity       = 2
+  min_capacity       = 1
+  resource_id        = "service/${var.cluster_name}/${var.service_name}"
+  scalable_dimension = "ecs:service:DesiredCount"
+  role_arn           = var.role_arn_asg
+}
